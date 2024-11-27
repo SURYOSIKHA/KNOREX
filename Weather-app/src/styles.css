@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body {
+  background: linear-gradient(to right, #00b4d8, #a2d6f3); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: border-color 0.3s, transform 0.2s ease-in-out;
+}
+
+select:focus,
+input:focus {
+  border-color: #accdf0;
+  transform: scale(1.02);
+}
+.weather-info {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-info strong {
+  font-weight: 600;
+}
+.forecast {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.forecast-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+}
+
+.forecast-item .forecast-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.forecast-item span {
+  font-size: 1rem;
+}
+
+.forecast-item .forecast-temp {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.loader,
+.empty-state {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.empty-state {
+  color: #888;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
